@@ -1,0 +1,371 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>U.&amp;RIDE</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img class="logo-big" src="img/logo.png" alt="logo">
+                <img class="logo-little" src="img/logo-little.png" alt="logo-little">
+            </a>
+        </div>
+        <div class="logo-bg"></div>
+        <div id="burgermenu" class="menu-burger" onclick="burgerMenu();"></div>
+        <ul id="navbar" class="navbar noselect">
+            <a href="index.html" id="onglet-1" >
+                <li class="navbar-accueil navbar-active">
+                    <div class="icon"></div>
+                    <span id="onglet-1-span">Accueil</span>
+                </li>
+            </a>
+            <a onclick="Search();" id="onglet-2">
+                <li class="navbar-rechercher">
+                    <div class="icon"></div>
+                    <span id="onglet-2-span">Rechercher</span>
+                </li>
+            </a>
+            <div id="SearchID" class="-hidden">
+                <input  class="Searchbar" type="texte" placeholder="Rechercher sur U.&RIDE...">
+                <a href="#" class="btn-search" onclick="searchValidate();"></a>
+            </div>
+            <a id="onglet-3">
+                <li class="navbar-boutique">
+                    <div class="icon"></div>
+                    <span id="onglet-3-span">Boutique</span>
+                </li>
+            </a>
+            <a id="onglet-4">
+                <li class="navbar-compte">
+                    <div class="icon"></div>
+                    <span id="onglet-4-span">Mon compte</span>
+                </li>
+            </a>
+            <a id="onglet-5">
+                <li class="navbar-contact">
+                    <div class="icon"></div>
+                    <span id="onglet-5-span">Nous<br>contacter</span>
+                </li>
+            </a>
+        </ul>
+    </nav>
+    <ul class="panier">
+        <a href="#"><li class="panier-icon"></li></a>
+        <li class="panier-infos">
+            <h3 class="panier-nbr-articles">3 Articles</h3>
+            <br>
+            <span>dans le panier</span>
+        </li>
+        <div id="ShopList" class="shopslideoff">
+        <ul class="listeArt">
+            <li>
+                <a href="#" class="Remove">x</a>
+            </li>
+            <li>
+                <img class="ArtImg" src="img/featured/featured-item-3-resize.png" alt="oui">
+                <p class="ArtName">skateboard  149.00€</p>
+            </li>
+        </ul>
+        <ul class="listeArt">
+            <li>
+                <a href="#" class="Remove">x</a>
+            </li>
+            <li class="ArtCont">
+                <img class="ArtImg" src="img/featured/featured-item-3-resize.png" alt="oui">
+                <p class="ArtName">skateboard  149.00€</p>
+            </li>
+        </ul>
+        <ul class="listeArt">
+            <li>
+                <a href="#" class="Remove">x</a>
+            </li>
+            <li>
+                <img class="ArtImg" src="img/featured/featured-item-3-resize.png" alt="oui">
+                <p class="ArtName">skateboard  149.00€</p>
+            </li>
+        </ul>
+        <p class="total">Total : 447.00€</p>
+        </div>
+    </ul>
+    <header>
+        <div class="container">
+            <div class="carousel">
+                <div id="carousel-big" class="carousel-big">
+                    <video class="video-1" autoplay loop muted src="video/video1.mp4" preload="auto" onclick="checkVideo();"></video>
+                </div>
+                <div id="carousel-big-2" class="carousel-big carousel-hidden">
+                    <video class="video-2" autoplay loop muted src="video/video2.mp4" preload="auto" onclick="checkVideo();"></video>
+                </div>
+                <div id="carousel-little" class="carousel-little" onclick="checkVideo();" onmouseover="videoPlay();" onmouseout="videoPause();">
+                    <video class="video-3" autoplay loop muted src="video/video2.mp4" preload="auto"></video>
+                </div>
+                <div id="carousel-little-2" class="carousel-little carousel-hidden" onclick="checkVideo();" onmouseover="videoPlay();" onmouseout="videoPause();">
+                    <video class="video-4" autoplay loop muted src="video/video1.mp4" preload="auto"></video>
+                </div>
+                <div class="carousel-little-background"></div>
+                <a href="#" class="btn-carousel-next" onclick="checkVideo();">Suivant →</a>
+            </div>
+        </div>
+    </header>
+    <section class="marques">
+        <div class="container">
+            <div class="title">
+                <h3 class="title-top">Nos partenaires</h3>
+                <h4 class="title-shadow">Nos partenaires</h4>
+            </div>
+            <div class="gallery-marques">
+                <img src="img/marques/element.png" alt="marque-1">
+                <img src="img/marques/globe.png" alt="marque-2">
+                <img src="img/marques/penny.png" alt="marque-3">
+                <img src="img/marques/dc.png" alt="marque-4">
+                <img src="img/marques/zflex.png" alt="marque-5">
+                <img src="img/marques/sector9.png" alt="marque-6">
+                <img src="img/marques/planb.png" alt="marque-7">
+                <img src="img/marques/SantaCruz.png" alt="marque-8">
+                <img src="img/marques/dusters.png" alt="marque-9">
+                <img src="img/marques/yow.png" alt="marque-10">
+                <img src="img/marques/longisland.png" alt="marque-11">
+            </div>
+        </div>
+    </section>
+    <section class="featured">
+        <div class="container">
+            <div class="title">
+                <h3 class="title-top">Nouvelles exclusivitées</h3>
+                <h4 class="title-shadow">Nouvelles exclusivitées</h4>
+            </div>
+            <div class="gallery-featured">
+                <a href="#">
+                    <div class="item-1"><img src="img/featured/featured-item-1.png" alt="item-1"></div>
+                </a>
+                <a href="#">
+                    <div class="item-2"><img src="img/featured/featured-item-2.png" alt="item-2"></div>
+                </a>
+                <a href="#">
+                    <div class="item-3"><img src="img/featured/featured-item-3.png" alt="item-3"></div>
+                </a>
+                <a href="#">
+                    <div class="item-4"><img src="img/featured/featured-item-4.png" alt="item-4"></div>
+                </a>
+                <a href="#">
+                    <div class="item-5"><img src="img/featured/featured-item-5.png" alt="item-5"></div>
+                </a>
+            </div>
+            <div class="separation-big"></div>
+            <div class="separation-little"></div>
+        </div>
+    </section>
+
+    <section id="categorie-skateboard" class="categories">
+        <div class="container">
+            <div class="title">
+                <h3 class="title-top">Skateboard</h3>
+                <h4 class="title-shadow">Skateboard</h4>
+            </div>
+            <div class="gallery-categories">
+                <a href="article.html"  class="item">
+                    <div class="item-1"><img src="img/categories-1/planche-1.jpeg" alt="item-1"></div>
+                    <span class="category-name">Skateboard</span>
+                    <h3 class="item-name">Gavin wind complete</h3>
+                    <span class="item-price">149,00€</span>
+                    <button class="btn-item-buy">Ajouter au panier</button>
+                </a>
+                <a href="article.html"  class="item">
+                    <div class="item-2"><img src="img/categories-1/planche-2.jpeg" alt="item-2"></div>
+                    <span class="category-name">Skateboard</span>
+                    <h3 class="item-name">Nyjah Touring 7.75 complete</h3>
+                    <span class="item-price">149,00€</span>
+                    <button class="btn-item-buy">Ajouter au panier</button>
+                </a>
+                <a href="article.html"  class="item">
+                    <div class="item-3"><img src="img/categories-1/planche-3.jpeg" alt="item-3"></div>
+                    <span class="category-name">Skateboard</span>
+                    <h3 class="item-name">Sunset 7.75</h3>
+                    <span class="item-price">99,00€</span>
+                    <button class="btn-item-buy">Ajouter au panier</button>
+                </a>
+                <a href="article.html" class="item">
+                    <div class="item-4"><img src="img/categories-1/planche-4.jpeg" alt="item-4"></div>
+                    <span class="category-name">Skateboard</span>
+                    <h3 class="item-name">92 Jungle 7.7</h3>
+                    <span class="item-price">99,00€</span>
+                    <button class="btn-item-buy">Ajouter au panier</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="categorie-skateboard" class="categories">
+        <div class="container">
+            <div class="gallery-categories">
+                <a href="article.html"  class="item">
+                    <div class="item-1"><img src="img/categories-1/planche-5.jpeg" alt="item-1"></div>
+                    <span class="category-name">Skateboard</span>
+                    <h3 class="item-name">Rhombus 7.75 Skateboard</h3>
+                    <span class="item-price">99,00€</span>
+                    <button class="btn-item-buy">Ajouter au panier</button>
+                </a>
+                <a href="article.html"  class="item">
+                    <div class="item-2"><img src="img/categories-1/planche-6.jpeg" alt="item-2"></div>
+                    <span class="category-name">Skateboard</span>
+                    <h3 class="item-name">Seal Braincells 7.75 deck</h3>
+                    <span class="item-price">99,00€</span>
+                    <button class="btn-item-buy">Ajouter au panier</button>
+                </a>
+                <a href="article.html"  class="item">
+                    <div class="item-3"><img src="img/categories-1/planche-7.jpeg" alt="item-3"></div>
+                    <span class="category-name">Skateboard</span>
+                    <h3 class="item-name">Camp Willwood</h3>
+                    <span class="item-price">129,00€</span>
+                    <button class="btn-item-buy">Ajouter au panier</button>
+                </a>
+                <a href="article.html" class="item">
+                    <div class="item-4"><img src="img/categories-1/planche-8.jpeg" alt="item-4"></div>
+                    <span class="category-name">Skateboard</span>
+                    <h3 class="item-name">Nyjah Sonic 7.7</h3>
+                    <span class="item-price">99,00€</span>
+                    <button class="btn-item-buy">Ajouter au panier</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="categorie-skateboard" class="categories">
+        <div class="container">
+            <div class="title">
+                <h3 class="title-top">Streetwear</h3>
+                <h4 class="title-shadow">Streetwear</h4>
+            </div>
+            <div class="gallery-categories">
+                <a href="article.html"  class="item">
+                    <div class="item-1"><img src="img/categories-2/One.jpg" alt="item-1"></div>
+                    <span class="category-name">Streetwear</span>
+                    <h3 class="item-name">GAVIN PRO COMPLETE - BLACK</h3>
+                    <span class="item-price">149,00€</span>
+                    <button class="btn-item-buy">Ajouter au panier</button>
+                </a>
+                <a href="article.html"  class="item">
+                    <div class="item-2"><img src="img/categories-2/Two.jpeg" alt="item-2"></div>
+                    <span class="category-name">Streetwear</span>
+                    <h3 class="item-name">GAVIN PRO COMPLETE - BLACK</h3>
+                    <span class="item-price">149,00€</span>
+                    <button class="btn-item-buy">Ajouter au panier</button>
+                </a>
+                <a href="article.html"  class="item">
+                    <div class="item-3"><img src="img/categories-2/Three.jpeg" alt="item-3"></div>
+                    <span class="category-name">Streetwear</span>
+                    <h3 class="item-name">GAVIN PRO COMPLETE - BLACK</h3>
+                    <span class="item-price">149,00€</span>
+                    <button class="btn-item-buy">Ajouter au panier</button>
+                </a>
+                <a href="article.html" class="item">
+                    <div class="item-4"><img src="img/categories-2/Four.jpeg" alt="item-4"></div>
+                    <span class="category-name">Streetwear</span>
+                    <h3 class="item-name">GAVIN PRO COMPLETE - BLACK</h3>
+                    <span class="item-price">149,00€</span>
+                    <button class="btn-item-buy">Ajouter au panier</button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="categorie-skateboard" class="categories">
+        <div class="container">
+            <div class="title">
+                <h3 class="title-top">Accessoires</h3>
+                <h4 class="title-shadow">Accessoires</h4>
+            </div>
+            <div class="gallery-categories">
+                <a href="article.html"  class="item">
+                    <div class="item-1"><img src="img/categories-3/casquet.jpeg" alt="item-1"></div>
+                    <span class="category-name">Accessoires</span>
+                    <h3 class="item-name">Casque - BLACK</h3>
+                    <span class="item-price">19,00€</span>
+                    <button class="btn-item-buy">Ajouter au panier</button>
+                </a>
+                <a href="article.html"  class="item">
+                    <div class="item-2"><img src="img/categories-3/planche.jpeg" alt="item-2"></div>
+                    <span class="category-name">Accessoires</span>
+                    <h3 class="item-name">Planche skateboard - Bleu</h3>
+                    <span class="item-price">39,00€</span>
+                    <button class="btn-item-buy">Ajouter au panier</button>
+                </a>
+                <a href="article.html"  class="item">
+                    <div class="item-3"><img src="img/categories-3/roues.jpeg" alt="item-3"></div>
+                    <span class="category-name">Accessoires</span>
+                    <h3 class="item-name">Roues - Bleu</h3>
+                    <span class="item-price">11,99€</span>
+                    <button class="btn-item-buy">Ajouter au panier</button>
+                </a>
+                <a href="article.html" class="item">
+                    <div class="item-4"><img src="img/categories-3/sac.jpeg" alt="item-4"></div>
+                    <span class="category-name">Accessoires</span>
+                    <h3 class="item-name">Sac board - Bleu marin</h3>
+                    <span class="item-price">39,00€</span>
+                    <button class="btn-item-buy">Ajouter au panier</button>
+                </a>
+            </div>
+        </div>
+    </section>
+    <div class="pre-footer"></div>
+    <footer>
+        <div class="liensutiles">
+            <h3>Liens utiles</h3>
+            <div class="separation"></div>
+            <ul>
+                <a href="#">
+                    <li>Politique de confidentialité</li>
+                </a>
+                <a href="#">
+                    <li>Conditions d’utilisations</li>
+                </a>
+                <a href="#">
+                    <li>Conditions générales de vente</li>
+                </a>
+                <a href="#">
+                    <li>Nous contacter</li>
+                </a>
+            </ul>
+        </div>
+        <div class="socials">
+            <h3>Réseaux sociaux</h3>
+            <div class="separation"></div>
+            <ul>
+                <a href="#">
+                    <li class="facebook"></li>
+                </a>
+                <a href="#">
+                    <li class="twitter"></li>
+                </a>
+                <a href="#">
+                    <li class="instagram"></li>
+                </a>
+                <a href="#">
+                    <li class="youtube"></li>
+                </a>
+            </ul>
+        </div>
+        <div class="newsletter">
+            <h3>Vous souhaitez rester averti ?</h3>
+            <span>→ Abonnez-vous à notre Newsletter !</span>
+            <br>
+            <input type="text" placeholder="EMAIL@EXEMPLE.FR">
+            <a href="#" class="btn-newsletter-send"></a>
+        </div>
+    </footer>
+
+    <div class="background"></div>
+</body>
+<script src="js/script.js"></script>
+<script src="js/indexscript.js"></script>
+</html>
