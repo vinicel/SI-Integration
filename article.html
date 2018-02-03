@@ -1,0 +1,189 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>U.&amp;RIDE</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img class="logo-big" src="img/logo.png" alt="logo">
+                <img class="logo-little" src="img/logo-little.png" alt="logo-little">
+            </a>
+        </div>
+        <div class="logo-bg"></div>
+        <div id="burgermenu" class="menu-burger" onclick="burgerMenu();"></div>
+        <ul id="navbar" class="navbar noselect">
+            <a href="index.html" id="onglet-1">
+                <li class="navbar-accueil navbar-active">
+                    <div class="icon"></div>
+                    <span id="onglet-1-span">Accueil</span>
+                </li>
+            </a>
+            <a onclick="Search();" id="onglet-2">
+                <li class="navbar-rechercher">
+                    <div class="icon"></div>
+                    <span id="onglet-2-span">Rechercher</span>
+                </li>
+            </a>
+            <div id="SearchID" class="-hidden">
+                <input class="Searchbar" type="texte" placeholder="Rechercher sur U.&RIDE...">
+                <a href="#" class="btn-search" onclick="searchValidate();"></a>
+            </div>
+            <a id="onglet-3">
+                <li class="navbar-boutique">
+                    <div class="icon"></div>
+                    <span id="onglet-3-span">Boutique</span>
+                </li>
+            </a>
+            <a id="onglet-4">
+                <li class="navbar-compte">
+                    <div class="icon"></div>
+                    <span id="onglet-4-span">Mon compte</span>
+                </li>
+            </a>
+            <a id="onglet-5">
+                <li class="navbar-contact">
+                    <div class="icon"></div>
+                    <span id="onglet-5-span">Nous<br>contacter</span>
+                </li>
+            </a>
+        </ul>
+    </nav>
+    <ul class="panier">
+        <a href="#">
+            <li class="panier-icon"></li>
+        </a>
+        <li class="panier-infos">
+            <h3 class="panier-nbr-articles">3 Articles</h3>
+            <br>
+            <span>dans le panier</span>
+        </li>
+        <div id="ShopList" class="shopslideoff">
+            <ul class="listeArt">
+                <li>
+                    <a href="#" class="Remove">x</a>
+                </li>
+                <li>
+                    <img class="ArtImg" src="img/featured/featured-item-3-resize.png" alt="oui">
+                    <p class="ArtName">skateboard 149.00€</p>
+                </li>
+            </ul>
+            <ul class="listeArt">
+                <li>
+                    <a href="#" class="Remove">x</a>
+                </li>
+                <li class="ArtCont">
+                    <img class="ArtImg" src="img/featured/featured-item-3-resize.png" alt="oui">
+                    <p class="ArtName">skateboard 149.00€</p>
+                </li>
+            </ul>
+            <ul class="listeArt">
+                <li>
+                    <a href="#" class="Remove">x</a>
+                </li>
+                <li>
+                    <img class="ArtImg" src="img/featured/featured-item-3-resize.png" alt="oui">
+                    <p class="ArtName">skateboard 149.00€</p>
+                </li>
+            </ul>
+            <p class="total">Total : 447.00€</p>
+        </div>
+    </ul>
+    <header>
+        <div class="container">
+            <section class="sectionla">
+                <div class="column__1">
+                    <img class="image__produit" src="img/article/GAVIN-PRO-RASTA.png" alt="Produit">
+                </div>
+                <div class="column__2">
+                    <div class="produit__information">
+                        <h3 class="le__produit">GAVIN PRO COMPLETE - BLACK</h3>
+                        <p class="reference">REF : 4524569809323429</p>
+                        <div class="decatlon">
+                            <p class="prix">149,00€</p>
+                            <br>
+                            <p class="quantite">Quantité :</p>
+                            <input class="choice" type="number" value="1" min="1" max="100" name="option"> <br>
+                            <a class="btn-item-buy-article" href="#">Ajouter au panier</a>
+                        </div>
+                    </div>
+                    <div class="more__information">
+                        <ul class="information__list">
+                            <li class="information__item">
+                                <h3 class="information__h3">Information produit</h3>
+                                <p class="information__paragraphe">
+                                Matière : 'Plateau en érable.<br><br>
+                                Configuration :<br><br>
+                                Trucks : Gullwing Mission 1-7. "<br>
+                                Roues : Sector9 - Nine Balls 59 mm 78 A.<br>
+                                Billes : Sector 9 - greaseballs.<br>
+                                Grip tape griptape : Sector9 logo.<br>
+                                Le kit est livré complet et assemblé.<br>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </header>
+    <div class="pre-footer"></div>
+    <footer>
+        <div class="liensutiles">
+            <h3>Liens utiles</h3>
+            <div class="separation"></div>
+            <ul>
+                <a href="#">
+                    <li>Politique de confidentialité</li>
+                </a>
+                <a href="#">
+                    <li>Conditions d’utilisations</li>
+                </a>
+                <a href="#">
+                    <li>Conditions générales de vente</li>
+                </a>
+                <a href="#">
+                    <li>Nous contacter</li>
+                </a>
+            </ul>
+        </div>
+        <div class="socials">
+            <h3>Réseaux sociaux</h3>
+            <div class="separation"></div>
+            <ul>
+                <a href="#">
+                    <li class="facebook"></li>
+                </a>
+                <a href="#">
+                    <li class="twitter"></li>
+                </a>
+                <a href="#">
+                    <li class="instagram"></li>
+                </a>
+                <a href="#">
+                    <li class="youtube"></li>
+                </a>
+            </ul>
+        </div>
+        <div class="newsletter">
+            <h3>Vous souhaitez rester averti ?</h3>
+            <span>→ Abonnez-vous à notre Newsletter !</span>
+            <br>
+            <input type="text" placeholder="EMAIL@EXEMPLE.FR">
+            <a href="#" class="btn-newsletter-send"></a>
+        </div>
+    </footer>
+
+    <div class="background"></div>
+</body>
+<script src="js/script.js"></script>
+
+</html>
